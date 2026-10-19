@@ -23,61 +23,86 @@
 <main>
 <div class="card">
 <h1>Privacy Policy – Azkaar Counter</h1>
-<p class="meta"><strong>Effective date:</strong> 3 October 2026<br>
+<p class="meta"><strong>Effective date:</strong> 18 October 2026 (version 3.0)<br>
 <strong>Developer:</strong> IrfanUllah Khattak<br>
 <strong>Contact:</strong> engr.irfanktk@gmail.com</p>
-
-<p>Azkaar Counter ("the app") helps you count the azkaar (remembrances) you recite after the five daily prayers. This policy explains what happens to your information when you use the app.</p>
-
+<p>Azkaar Counter ("the app") helps you count the azkaar (remembrances) you recite after the five daily prayers and shows each prayer's time. This policy explains what happens to your information when you use the app.</p>
 <h2>Summary</h2>
 <ul>
-  <li>The app has <strong>no accounts, no ads, no analytics and no tracking</strong> by the developer.</li>
-  <li>Everything you do in the app is <strong>stored only on your device</strong>.</li>
-  <li>The app has <strong>no internet permission</strong> and does not send your data to the developer or to anyone else.</li>
+<li>The app has <strong>no accounts, no ads, no analytics and no tracking</strong> by the developer.</li>
+<li>Your azkaar lists, counts, images and settings are <strong>stored only on your device</strong>.</li>
+<li>The internet is used <strong>only to download prayer times</strong> from the Aladhan prayer-times service, using your <strong>approximate</strong> location (or the city you choose), and to check about once a week for <strong>new azkaar texts</strong> published by the developer (no personal data is sent).</li>
 </ul>
-
 <h2>Data stored on your device</h2>
 <p>The app stores the following <strong>locally on your phone</strong>, only so that the app works:</p>
 <ul>
-  <li>your azkaar lists (order, target counts and today's progress),</li>
-  <li>images you add by scanning a page or choosing a photo (saved privately inside the app),</li>
-  <li>your settings (beep, vibration, keep-screen-awake, theme, daily reset time).</li>
+<li>your azkaar lists (order, target counts and today's progress),</li>
+<li>images you add by scanning a page or choosing a photo (saved privately inside the app),</li>
+<li>azkaar you add to the gallery yourself (title, Arabic text, translation and notes),</li>
+<li>your settings (beep, vibration, keep-screen-awake, theme, daily reset time, prayer-time method, location choice and prayer alarm times),</li>
+<li>downloaded prayer times, and your last approximate location or chosen city, so times also work offline.</li>
 </ul>
-<p>This data never leaves your device through the app. The developer cannot see it.</p>
-
+<p>This data never leaves your device through the app, except as described under "Prayer times", or when <strong>you</strong> choose <strong>Export My Azkaar</strong> (which saves a file where you choose). The developer cannot see it.</p>
+<h2>Prayer times and location</h2>
+<ul>
+<li>To show when each prayer starts and ends, the app needs to know roughly where you are. You choose how:
+<ul>
+<li><strong>Approximate location:</strong> if you allow it, Android gives the app your approximate (city-level, about 2–3 km) location. Precise (GPS-level) location and background location are <strong>never</strong> requested.</li>
+<li><strong>Choose city:</strong> you pick a city from a list built into the app; no location permission is needed.</li>
+</ul></li>
+<li>The app then sends the <strong>latitude and longitude</strong> (of your approximate location or chosen city), the date, and your chosen calculation method to <strong>api.aladhan.com</strong> (the Aladhan prayer-times service) over an encrypted (HTTPS) connection, and receives a month of prayer times.</li>
+<li>This happens when you first set it up, about once a week, when the times run low, or when your location changes by more than about 50 km. The weekly update in the background uses the location saved earlier; it does not access your location in the background.</li>
+<li>No name, account, phone number or other identifier is sent by the app. Like any website, Aladhan's servers receive your internet (IP) address when the app connects. Aladhan's handling of requests is covered by its own terms: <a href="https://aladhan.com">https://aladhan.com</a></li>
+<li>If there is no internet, the app calculates prayer times on your phone instead.</li>
+<li>You can switch between approximate location and a chosen city at any time in <strong>Settings → Prayer times</strong>, and you can withdraw location permission in Android's settings.</li>
+</ul>
+<h2>New azkaar (content updates)</h2>
+<ul>
+<li>About once a week (only if "Check for new azkaar" is on in Settings), the app downloads one text file of azkaar from GitHub (<strong>raw.githubusercontent.com</strong>) over an encrypted (HTTPS) connection.</li>
+<li><strong>Nothing is sent</strong> with this request: no location, no identifier, and none of your azkaar or counts. Like any website, GitHub receives your internet (IP) address when the app connects; see the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</li>
+<li>New azkaar are only added after you tap <strong>Update</strong>. You can turn checking off in <strong>Settings → Azkaar Gallery</strong>.</li>
+</ul>
+<h2>Reading a dua from a photo</h2>
+<ul>
+<li>In <strong>Add Zikr / Dua</strong>, <strong>Scan</strong> and <strong>Photo</strong> read the text of a printed dua from a picture. This text recognition runs <strong>entirely on your phone</strong>; the picture is <strong>never uploaded</strong>.</li>
+<li>The first time you use a language (Arabic, Urdu or English), the app downloads that language's recognition data (about 4–12 MB) from the open-source Tesseract project on GitHub (<strong>raw.githubusercontent.com</strong>) over HTTPS. Nothing about you or your photo is sent with this download.</li>
+<li>If you choose to keep the picture with your dua, it is saved privately inside the app and included in <strong>Export My Azkaar</strong> only if you export.</li>
+</ul>
 <h2>Camera and photos</h2>
 <ul>
-  <li><strong>Scan document</strong> opens Google's document scanner, provided by Google Play services. The app does not request the camera permission itself.</li>
-  <li><strong>Choose from gallery</strong> uses the Android Photo Picker. The app only receives the one photo you pick and does not request storage permission.</li>
-  <li>The image you crop is saved privately inside the app. The original photo in your gallery is not changed.</li>
+<li><strong>Scan document</strong> opens Google's document scanner, provided by Google Play services. The app does not request the camera permission itself.</li>
+<li><strong>Choose from gallery</strong> uses the Android Photo Picker. The app only receives the one photo you pick and does not request storage permission.</li>
+<li>The image you crop is saved privately inside the app. The original photo in your gallery is not changed.</li>
 </ul>
-
 <h2>Google Play services (document scanner)</h2>
 <p>The document scanner is part of Google's ML Kit and runs inside Google Play services, not inside this app. According to Google, ML Kit may collect limited technical information (such as device model, Android version, app package name and version, per-installation identifiers and performance metrics) for diagnostics and usage analytics. It is encrypted in transit and is not shared with third parties. This is handled by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. See also: <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>.</p>
 <p>If you never use <strong>Scan document</strong>, the scanner is not started.</p>
-
+<h2>Friday reminders</h2>
+<p>The Friday reminders (Surah Al-Kahf, Jumma prayer, the last hour of Friday) are scheduled <strong>on your phone</strong> from the prayer times already saved there. No internet connection is used and nothing is sent anywhere to show them. "Mark as read" on a reminder only updates your progress on the phone.</p>
+<h2>Prayer alarms</h2>
+<p>The prayer alarms (Fajr, Dhuhr / Jumma, Asr, Maghrib, Isha, Ishraq and Tahajjud) are scheduled <strong>on your phone</strong> from the prayer times already saved there, and only for the prayers you turn on. No internet connection is used and nothing is sent anywhere to ring them. Your alarm settings are stored on the phone and included in <strong>Export My Azkaar</strong> only if you export.</p>
 <h2>Backups</h2>
 <p>If you have turned on Android backup for your device, Android may include the app's data in your personal device backup (for example, in your Google account). This is controlled by your device settings, not by the app.</p>
-
 <h2>Deleting your data</h2>
 <ul>
-  <li><strong>In the app:</strong> Settings → Your data → <strong>Delete all data</strong> erases all lists, images, progress and settings stored by the app.</li>
-  <li><strong>Uninstalling</strong> the app also deletes all of its data from your device.</li>
+<li><strong>In the app:</strong> Settings → Your data → <strong>Delete all data</strong> erases all lists, your own gallery azkaar, images, progress, settings, saved location and downloaded prayer times stored by the app.</li>
+<li><strong>Uninstalling</strong> the app also deletes all of its data from your device.</li>
 </ul>
-<p>Because the developer never receives your data, there is nothing for the developer to delete on a server.</p>
-
+<p>The developer never receives your data, so there is nothing for the developer to delete on a server.</p>
 <h2>Children</h2>
 <p>The app does not knowingly collect personal information from anyone, including children.</p>
-
 <h2>Permissions</h2>
 <ul>
-  <li><strong>Vibrate:</strong> for light vibration when you count and when a zikr is complete.</li>
+<li><strong>Approximate location</strong> (optional): to calculate prayer times for where you are. You can choose a city instead.</li>
+<li><strong>Internet and network state:</strong> to download prayer times, new azkaar texts and (once per language) text-recognition data.</li>
+<li><strong>Vibrate:</strong> for light vibration when you count and when a zikr is complete.</li>
+<li><strong>Notifications</strong> (optional, asked for only when you turn on a prayer alarm or a Friday reminder, or open Jumma &amp; Special Azkaar): to show the prayer alarms and Friday reminders. You can turn them off in the app (Settings → Alarms, Settings → Reminders) or in Android's settings.</li>
+<li><strong>Alarms &amp; reminders</strong> (optional, exact alarms): so prayer alarms ring on time. You allow it in Android's settings; without it the alarms may be a few minutes late.</li>
+<li><strong>Run at startup / keep awake briefly:</strong> used by Android's job scheduler (WorkManager) so the weekly prayer-times update can run, and to set the prayer alarms and Friday reminders again after the phone restarts.</li>
 </ul>
-<p>The app does not request location, contacts, camera, microphone, storage, phone, SMS or internet access.</p>
-
+<p>The app does not request precise or background location, contacts, camera, microphone, storage, phone or SMS access.</p>
 <h2>Changes to this policy</h2>
 <p>If this policy changes, the updated version will be published at this same address with a new effective date.</p>
-
 <h2>Contact</h2>
 <p>Questions about this policy: engr.irfanktk@gmail.com</p>
 </div>
